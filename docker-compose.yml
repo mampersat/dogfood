@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  stream-site:
+    build: ./public-site
+    image: matt/node-web-app
+    container_name: node-web-app
+    command: npm run start
+    ports:
+      - 3000:8080
