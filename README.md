@@ -1,12 +1,14 @@
 # Dog Food
 Fly the kite with `node` and `postgres` in `docker`
-- [ ] docker
-- [ ] node
-- [ ] postgres
+- [x] docker
+- [x] node
+- [x] postgres
+- [ ] connect to postgres
+- [ ] read from a table (create table etc.)
 
 ## Testing
 ```
-docker build -t matt/node-web-app .
+docker build -t dogfood/app .
 docker-compose up
 curl localhost:3000
 ```

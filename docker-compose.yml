@@ -1,10 +1,15 @@
 version: '3'
 
 services:
-  stream-site:
-    build: ./public-site
-    image: matt/node-web-app
-    container_name: node-web-app
+  web:
+    build: .
+    image: dogfood/app
+    container_name: app
     command: npm run start
     ports:
       - 3000:8080
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: app
+      POSTGRES_DB: app
